@@ -1,0 +1,12 @@
+main: nl.warofeurope.event.Event
+version: 1.0
+name: WarOfEurope-MineEvent
+depend:
+  - LuckPerms
+commands:
+  togglemineevent:
+    description: Toggle het event
+  event:
+    description: Event
+  resetplayerprogress:
+    description: Reset een speler

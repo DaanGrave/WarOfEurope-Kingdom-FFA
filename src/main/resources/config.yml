@@ -1,0 +1,22 @@
+active: false
+points:
+  DIAMOND_ORE: 20
+  EMERALD_ORE: 18
+  GOLD_ORE: 16
+  IRON_ORE: 14
+  COAL_ORE: 12
+  REDSTONE_ORE: 10
+  LAPIS_ORE: 8
+leaderboards:
+  player:
+    world: Unk
+    x: 1033.5
+    y: 36
+    z: 480.5
+  land:
+    world: Unk
+    x: 1033.5
+    y: 36
+    z: 474.5
+landen: []
+players: {}
