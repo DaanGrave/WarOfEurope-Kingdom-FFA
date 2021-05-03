@@ -40,7 +40,7 @@ public class BlockBreakListener implements Listener {
         Block block = event.getBlock();
         Material material = block.getType();
 
-        if (this.pointBlocks.containsKey(material) && !block.hasMetadata("event_deny") && Event.getInstance().isActive()){
+        if (this.pointBlocks.containsKey(material) && block.getData() == 1 && !block.hasMetadata("event_deny") && Event.getInstance().isActive()){
             int points = pointBlocks.get(material);
             Event.getInstance().getPlayerDao().addPoints(player, points);
             player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new ComponentBuilder(color("&d+ " + points + " Punten &7(totaal: " + Event.getInstance().getPlayerDao().getPoints(player) + ")")).create());

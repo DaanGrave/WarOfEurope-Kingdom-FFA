@@ -26,18 +26,18 @@ public class EventCommand extends CommandBase {
         Bukkit.getScheduler().runTaskAsynchronously(Event.getInstance(), () -> {
             sender.sendMessage(color(" "));
             sender.sendMessage(color("&b&lEvent Status:"));
-            sender.sendMessage(color(" "));
-            sender.sendMessage(color("&6[Speler Top]"));
-            Event.getInstance().getPlayerDao().getAll().entrySet().stream().sorted((o1, o2) -> o2.getValue() - o1.getValue()).limit(3).forEach(player -> {
-                sender.sendMessage(Bukkit.getOfflinePlayer(UUID.fromString(player.getKey())).getName() + " " + this.decimalFormat.format(player.getValue()));
-            });
+//            sender.sendMessage(color(" "));
+//            sender.sendMessage(color("&6[Speler Top]"));
+//            Event.getInstance().getPlayerDao().getAll().entrySet().stream().sorted((o1, o2) -> o2.getValue() - o1.getValue()).limit(3).forEach(player -> {
+//                sender.sendMessage(Bukkit.getOfflinePlayer(UUID.fromString(player.getKey())).getName() + " " + this.decimalFormat.format(player.getValue()));
+//            });
             sender.sendMessage(color(" "));
             sender.sendMessage(color("&6[Land Top]"));
-            Event.getInstance().calculateLands().entrySet().stream().sorted((o1, o2) -> o2.getValue() - o1.getValue()).limit(3).forEach(land -> {
+            Event.getInstance().calculateLands().entrySet().stream().sorted((o1, o2) -> o2.getValue() - o1.getValue()).limit(5).forEach(land -> {
                 sender.sendMessage(land.getKey() + " " + this.decimalFormat.format(land.getValue()));
             });
             sender.sendMessage(color(" "));
-            sender.sendMessage(color("&7&oDit Event duurt tot 21:00!"));
+            sender.sendMessage(color("&7&oDit Event duurt tot 8 mei 15:45"));
         });
         return true;
     }

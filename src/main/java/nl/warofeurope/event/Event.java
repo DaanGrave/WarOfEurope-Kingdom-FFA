@@ -9,6 +9,7 @@ import nl.warofeurope.event.dao.PlayerDao;
 import nl.warofeurope.event.listeners.BlockBreakListener;
 import nl.warofeurope.event.listeners.BlockPlaceListener;
 import nl.warofeurope.event.listeners.PistonPushListener;
+import nl.warofeurope.event.listeners.XPReceiveListener;
 import nl.warofeurope.event.utils.CommandBase;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -33,7 +34,8 @@ public class Event extends JavaPlugin {
         this.register(
                 new BlockBreakListener(),
                 new BlockPlaceListener(),
-                new PistonPushListener()
+                new PistonPushListener(),
+                new XPReceiveListener()
         );
         this.register(
                 new ToggleMineEventCommand(),
