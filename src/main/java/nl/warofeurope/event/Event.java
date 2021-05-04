@@ -34,8 +34,8 @@ public class Event extends JavaPlugin {
         this.register(
                 new BlockBreakListener(),
                 new BlockPlaceListener(),
-                new PistonPushListener(),
-                new XPReceiveListener()
+                new PistonPushListener()
+//                new XPReceiveListener()
         );
         this.register(
                 new ToggleMineEventCommand(),
